@@ -6,18 +6,26 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+          <% if(loggedIn) { %>
           <li class="nav-item">
             <a class="nav-link" href="/photo">Add Photo</a>
           </li>
+          <% } %>
+          <% if(!loggedIn) { %>
           <li class="nav-item">
             <a class="nav-link" href="/login">Login</a>
           </li>
+          <% } %>
+          <% if(loggedIn) { %>
           <li class="nav-item">
             <a class="nav-link" href="/logout">Log Out</a>
           </li>
+          <% } %>
+          <% if(!loggedIn) { %>
           <li class="nav-item">
             <a class="nav-link" href="/signup">Sign Up</a>
           </li>
+          <% } %>
         </ul>
       </div>
     </div>

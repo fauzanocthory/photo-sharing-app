@@ -2048,3 +2048,6 @@ input, select, textarea {
 		#footer .copyright a {
 			color: inherit;
 		}
+body {
+	background-color: black;
+}
