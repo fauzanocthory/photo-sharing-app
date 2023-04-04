@@ -3,21 +3,21 @@
     "username": "root",
     "password": "",
     "database": "photos",
-    "host": "172.106.0.23",
+    "host": "mariadb-119532-0.cloudclusters.net",
     "dialect": "mariadb"
   },
   "test": {
     "username": "root",
     "password": "",
     "database": "photos",
-    "host": "172.106.0.23",
+    "host": "mariadb-119532-0.cloudclusters.net",
     "dialect": "mariadb"
   },
   "production": {
     "username": "root",
     "password": "",
     "database": "photos",
-    "host": "172.106.0.23",
+    "host": "mariadb-119532-0.cloudclusters.net",
     "dialect": "mariadb"
   }
 }
