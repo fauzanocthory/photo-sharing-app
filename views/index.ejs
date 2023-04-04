@@ -1,6 +1,7 @@
 <%- include('partials/header.ejs') %>
-<body class="is-preload"></body>
+<body class="is-preload">
     <%- include('partials/navbar.ejs') %> 
+    <% console.log(data) %>
     <!-- Wrapper -->
         <div id="wrapper">
 
@@ -13,14 +14,16 @@
                         </ul>
                     </nav>
                 </header>
-
+ 
             <!-- Main -->
                 <div id="main">
-                    <% for (let i=0; i<data.length; i++) { %>
+                    <% for (let i=0; i< data.length; i++){ %>
                     <article class="thumb">
-                        <a href="images/<% data[i].dataValues.medialocation %>" class="image"><img src="images/<% data[i].dataValues.medialocation %>" alt="<% data[i].dataValues.title %>" /></a>
-                        <h2><% data[i].dataValues.title %></h2>
-                        <p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+                        <a href="images/<%= data[i].dataValues.medialocation %>" class="image"><img src="images/<%= data[i].dataValues.medialocation %>" alt="<% data[i].dataValues.title %>" /></a>
+                        <h2><%= data[i].dataValues.title %></h2>
+                        <p>Read Or Add
+                            <a href="/comments/<%= data[i].dataValues.id %>">Comment</a>
+                        </p>
                     </article>
                     <% } %>
                 </div>

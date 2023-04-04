@@ -22,11 +22,14 @@ UsersRouter.route('/login').post(async (request, response) => {
                         console.log("logged In")
                         response.redirect('/')
                     } else {
-                        console.log("this fired")
-                        response.redirect('/login')
+                        response.status(401)
+                        console.log("401 error")
+                        response.redirect('/badlogin')
                     }
                 })
-            }
+            } else {
+                response.send("No Such User")
+            } 
         })
             .catch((error) => {
                 console.log(error)

@@ -7,18 +7,20 @@ const CommentsModel = require('./models/CommentsModel')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
-global.loggedIn = null
+const logger = require("morgan")
 const session = require('express-session')
 app.use(session({
-    name : 'codeil',
-    secret : 'something',
-    resave :false,
-    saveUninitialized: true,
-    cookie : {
-            maxAge:(1000 * 60 * 100)
-    }      
+    secret: 'something',
+    resave: false,
+    saveUninitialized: true
 }));
+global.loggedIn = null
+app.use("*", (request, response, next) => {
+    loggedIn = request.session.userId
+    next()
+})
 
+app.use(logger("dev"))
 app.use(express.static('public'))
 app.set("view engine", "ejs")
 
