@@ -36,7 +36,7 @@ app.use('/', PageRouter)
 
 
 //DB
-const sqlPort = 3307
+const sqlPort = 17589
 db.sequelize
     .sync({})
     .then(() => {

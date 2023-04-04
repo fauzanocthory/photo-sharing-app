@@ -3,21 +3,21 @@
     "username": "root",
     "password": "",
     "database": "photos",
-    "host": "127.0.0.1",
+    "host": "172.106.0.23",
     "dialect": "mariadb"
   },
   "test": {
     "username": "root",
     "password": "",
     "database": "photos",
-    "host": "127.0.0.1",
+    "host": "172.106.0.23",
     "dialect": "mariadb"
   },
   "production": {
     "username": "root",
     "password": "",
     "database": "photos",
-    "host": "127.0.0.1",
+    "host": "172.106.0.23",
     "dialect": "mariadb"
   }
 }
