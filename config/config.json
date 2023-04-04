@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
+    "username": "fauzanocthory",
+    "password": "fauzan123",
     "database": "photos",
     "host": "mariadb-119532-0.cloudclusters.net",
     "dialect": "mariadb"
   },
   "test": {
-    "username": "root",
-    "password": "",
+    "username": "fauzanocthory",
+    "password": "fauzan123",
     "database": "photos",
     "host": "mariadb-119532-0.cloudclusters.net",
     "dialect": "mariadb"
   },
   "production": {
-    "username": "root",
-    "password": "",
+    "username": "fauzanocthory",
+    "password": "fauzan123",
     "database": "photos",
     "host": "mariadb-119532-0.cloudclusters.net",
     "dialect": "mariadb"
