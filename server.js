@@ -4,6 +4,8 @@ const app = new express()
 const db = require('./models')
 const CommentsModel = require('./models/CommentsModel')
 
+app.enable('trust proxy')
+
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
@@ -11,11 +13,18 @@ const logger = require("morgan")
 const session = require('express-session')
 app.use(session({
     secret: 'something',
-    resave: true,
-    saveUninitialized: true
+    resave: false,
+    saveUninitialized: true,
+    proxy: true, 
+    name: 'MyCoolWebAppCookieName', 
+    cookie: {
+      secure: true, 
+      httpOnly: false,
+      sameSite: 'none'
+    }
 }));
 
-// global.loggedIn = null
+global.loggedIn = null
 app.use("*", (request, response, next) => {
     loggedIn = request.session.userId
     next()
