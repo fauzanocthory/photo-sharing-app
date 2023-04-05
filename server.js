@@ -14,7 +14,8 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
-global.loggedIn = null
+
+// global.loggedIn = null
 app.use("*", (request, response, next) => {
     loggedIn = request.session.userId
     next()
