@@ -27,6 +27,7 @@ app.use(logger("dev"))
 app.use(express.static('public'))
 app.set("view engine", "ejs")
 
+
 const PhotosRouter = require('./routes/PhotosRouter')
 const UsersRouter = require('./routes/UsersRouter')
 const CommentsRouter = require('./routes/CommentsRouter')
@@ -36,7 +37,6 @@ app.use('/images', PhotosRouter)
 app.use('/users', UsersRouter)
 app.use('/comments', CommentsRouter)
 app.use('/', PageRouter)
-
 
 //DB
 const sqlPort = 17589
