@@ -14,17 +14,8 @@ const logger = require("morgan")
 const session = require('express-session')
 app.use(session({
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     secret: 'something',
-    proxy: true,
-    name: 'MyCoolWebAppCookieName',
-    cookie: {
-        path    : '/',
-        httpOnly: false,
-        maxAge  : 24*60*60*1000,
-        secure: true, // required for cookies to work on HTTPS
-        sameSite: 'none'
-    },
 }));
 global.loggedIn = null
 app.use("*", (request, response, next) => {

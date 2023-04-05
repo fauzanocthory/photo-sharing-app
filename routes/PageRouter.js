@@ -41,7 +41,7 @@ PageRouter.get("/", (request, response) => {
 
 PageRouter.get('/photo', (request, response) => {
     console.log(request.session.userId)
-    if (!request.session.userId) {
+    if (request.session.userId) {
         response.render('photo')
     } else {
         response.redirect('/login')
