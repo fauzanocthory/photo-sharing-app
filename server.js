@@ -3,6 +3,7 @@ const express = require('express')
 const app = new express()
 const db = require('./models')
 const CommentsModel = require('./models/CommentsModel')
+const Sequelize = require("sequelize");
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
@@ -35,10 +36,26 @@ app.use('/comments', CommentsRouter)
 app.use('/', PageRouter)
 
 
+const sequelize = new Sequelize(
+   'photos',
+   'fauzanocthory',
+   'fauzan123',
+    {
+      host: 'mariadb-119532-0.cloudclusters.net',
+      dialect: 'mysql'
+    }
+  );
+
+sequelize.authenticate().then(() => {
+   console.log('Connection has been established successfully.');
+}).catch((error) => {
+   console.error('Unable to connect to the database: ', error);
+});
+
 //DB
 const sqlPort = 17589
 db.sequelize
-    .sync({})
+    .sync()
     .then(() => {
         app.listen(sqlPort, () => {
             console.log(
