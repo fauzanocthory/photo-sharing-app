@@ -11,7 +11,7 @@ const logger = require("morgan")
 const session = require('express-session')
 app.use(session({
     secret: 'something',
-    resave: false,
+    resave: true,
     saveUninitialized: true
 }));
 global.loggedIn = null
