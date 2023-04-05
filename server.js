@@ -2,10 +2,17 @@ const { response } = require('express')
 const express = require('express')
 const app = new express()
 const db = require('./models')
+const cors = require("cors")
 const CommentsModel = require('./models/CommentsModel')
 const Sequelize = require("sequelize");
 let cookieParser = require("cookie-parser");
-
+app.use(
+    cors({
+        origin: "https://modern-lime-hospital-gown.cyclic.app",
+        methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
+        credentials: true
+    })
+)
 const oneDay = 1000 * 60 * 60 * 24;
 
 const bodyParser = require('body-parser')
