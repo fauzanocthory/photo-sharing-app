@@ -3,25 +3,25 @@ const express = require('express')
 const app = new express()
 const db = require('./models')
 const CommentsModel = require('./models/CommentsModel')
-
+const Sequelize = require("sequelize");
 
 const bodyParser = require('body-parser')
+
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 
-app.set('trust proxy', 1)
 const logger = require("morgan")
 const session = require('express-session')
 app.use(session({
-    secret: 'something',
     resave: false,
-    proxy: true, // if you do SSL outside of node.
     saveUninitialized: true,
-    cookie: { 
-        secure: true, 
-        sameSite: "none" 
-    }
+    cookie: {
+        path    : '/',
+        httpOnly: false,
+        maxAge  : 24*60*60*1000
+    },
+    secret: 'something',
 }));
-
 global.loggedIn = null
 app.use("*", (request, response, next) => {
     loggedIn = request.session.userId
