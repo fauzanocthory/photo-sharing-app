@@ -26,7 +26,7 @@ app.use(session({
     secret: "SECRET_KEY_FOR_SESSION",
     saveUninitialized: true,
     resave: false,
-    cookie: { maxAge: oneDay, secure: !true },
+    cookie: { maxAge: oneDay, secure: true },
 }));
 
 global.loggedIn = null
