@@ -2,9 +2,10 @@ const express = require('express')
 const CommentsRouter = express.Router()
 const db = require('../models')
 const bodyParser = require('body-parser');
+CommentsRouter.use(express.static("public"));
 
-CommentsRouter.use(bodyParser.urlencoded({extended: true}));
-CommentsRouter.use(bodyParser.json({extended: true}));
+CommentsRouter.use(bodyParser.urlencoded({extended: false}));
+CommentsRouter.use(bodyParser.json());
 
 CommentsRouter.route('/:photoId')
     .get((request, response) => {

@@ -70,9 +70,9 @@ PageRouter.get("/logout", (request, response) => {
     })
 })
 
-PageRouter.get("/*", (request, response) => {
-    console.log("404")
-    response.render("404")
-})
+// PageRouter.get("/*", (request, response) => {
+//     console.log("404")
+//     response.render("404")
+// })
 
 module.exports = PageRouter

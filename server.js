@@ -33,10 +33,10 @@ const UsersRouter = require('./routes/UsersRouter')
 const CommentsRouter = require('./routes/CommentsRouter')
 const PageRouter = require('./routes/PageRouter')
 
-app.use('/images', PhotosRouter)
-app.use('/users', UsersRouter)
-app.use('/comments', CommentsRouter)
 app.use('/', PageRouter)
+app.use('/images', PhotosRouter)
+app.use('/comments', CommentsRouter)
+app.use('/users', UsersRouter)
 
 //DB
 const sqlPort = 17589

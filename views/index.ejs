@@ -19,7 +19,7 @@
                 <div id="main">
                     <% for (let i=0; i< data.length; i++){ %>
                     <article class="thumb">
-                        <a href="images/<%= data[i].dataValues.medialocation %>" class="image"><img src="images/<%= data[i].dataValues.medialocation %>" alt="<% data[i].dataValues.title %>" /></a>
+                        <a href="./images/<%= data[i].dataValues.medialocation %>" class="image"><img src="images/<%= data[i].dataValues.medialocation %>" alt="<% data[i].dataValues.title %>" /></a>
                         <h2><%= data[i].dataValues.title %></h2>
                         <p>Read Or Add
                             <a href="/comments/<%= data[i].dataValues.id %>">Comment</a>
