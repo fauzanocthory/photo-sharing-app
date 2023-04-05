@@ -4,6 +4,7 @@
     "password": "fauzan123",
     "database": "photos",
     "host": "mariadb-119532-0.cloudclusters.net",
+    "port": 17589,
     "dialect": "mariadb"
   },
   "test": {
@@ -11,6 +12,7 @@
     "password": "fauzan123",
     "database": "photos",
     "host": "mariadb-119532-0.cloudclusters.net",
+    "port": 17589,
     "dialect": "mariadb"
   },
   "production": {
@@ -18,6 +20,7 @@
     "password": "fauzan123",
     "database": "photos",
     "host": "mariadb-119532-0.cloudclusters.net",
+    "port": 17589,
     "dialect": "mariadb"
   }
 }
