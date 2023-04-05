@@ -4,7 +4,7 @@ const app = new express()
 const db = require('./models')
 const CommentsModel = require('./models/CommentsModel')
 
-app.enable('trust proxy')
+app.enable('trust proxy', 1)
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
@@ -14,13 +14,11 @@ const session = require('express-session')
 app.use(session({
     secret: 'something',
     resave: false,
+    proxy: true, // if you do SSL outside of node.
     saveUninitialized: true,
-    proxy: true, 
-    name: 'MyCoolWebAppCookieName', 
-    cookie: {
-      secure: true, 
-      httpOnly: false,
-      sameSite: 'none'
+    cookie: { 
+        secure: true, 
+        sameSite: "none" 
     }
 }));
 
