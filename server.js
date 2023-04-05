@@ -4,11 +4,11 @@ const app = new express()
 const db = require('./models')
 const CommentsModel = require('./models/CommentsModel')
 
-app.enable('trust proxy', 1)
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
+app.set('trust proxy', 1)
 const logger = require("morgan")
 const session = require('express-session')
 app.use(session({
