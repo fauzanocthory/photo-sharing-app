@@ -39,22 +39,22 @@ app.use('/comments', CommentsRouter)
 app.use('/users', UsersRouter)
 
 //DB
-const sqlPort = 17589
-db.sequelize
-    .sync()
-    .then(() => {
-        app.listen(sqlPort, () => {
-            console.log(
-                `mariadb connection succesful ~ http://localhost:${sqlPort}`
-            )
-        })
-    })
-    .catch((error) => {
-        console.error("Unable to connect to the database", error)
-    })
+// const sqlPort = 3306
+// db.sequelize
+//     .sync()
+//     .then(() => {
+//         app.listen(sqlPort, () => {
+//             console.log(
+//                 `mariadb connection succesful ~ http://localhost:${sqlPort}`
+//             )
+//         })
+//     })
+//     .catch((error) => {
+//         console.error("Unable to connect to the database", error)
+//     })
 
 //SERVER
-const port = 8081
+const port = process.env.PORT || 3000
 app.listen(port, ()=>{
     console.log(`Serving photo on http://localhost:${port}`)
 })

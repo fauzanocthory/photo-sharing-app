@@ -1,26 +1,26 @@
 {
   "development": {
-    "username": "fauzanocthory",
-    "password": "fauzan123",
+    "username": "root",
+    "password": "",
     "database": "photos",
-    "host": "mariadb-119532-0.cloudclusters.net",
-    "port": 17589,
+    "host": "localhost",
+    "port": 3306,
     "dialect": "mariadb"
   },
   "test": {
-    "username": "fauzanocthory",
-    "password": "fauzan123",
+    "username": "root",
+    "password": "",
     "database": "photos",
-    "host": "mariadb-119532-0.cloudclusters.net",
-    "port": 17589,
+    "host": "localhost",
+    "port": 3306,
     "dialect": "mariadb"
   },
   "production": {
-    "username": "fauzanocthory",
-    "password": "fauzan123",
+    "username": "root",
+    "password": "",
     "database": "photos",
-    "host": "mariadb-119532-0.cloudclusters.net",
-    "port": 17589,
+    "host": "localhost",
+    "port": 3306,
     "dialect": "mariadb"
   }
 }
