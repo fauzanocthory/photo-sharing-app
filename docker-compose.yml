@@ -12,6 +12,19 @@ services:
     stdin_open: true
     environment:
       - PORT=7779
+      - NODE_ENV=production
     command: npm start
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 3306:3306
 volumes:
   node_modules:
