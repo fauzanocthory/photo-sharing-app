@@ -38,7 +38,7 @@ app.use('/images', PhotosRouter)
 app.use('/comments', CommentsRouter)
 app.use('/users', UsersRouter)
 
-//DB
+// DB
 // const sqlPort = 3306
 // db.sequelize
 //     .sync()
@@ -54,7 +54,7 @@ app.use('/users', UsersRouter)
 //     })
 
 //SERVER
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 app.listen(port, ()=>{
     console.log(`Serving photo on http://localhost:${port}`)
 })

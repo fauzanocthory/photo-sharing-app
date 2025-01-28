@@ -2,36 +2,30 @@ version: '3.3'
 
 services:
   web:
-    container_name: 'app'
-    image: node:22
+    container_name: 'web'
     build: .
     volumes:
-      - ./app:/var/www/html/
+      - .:/app
+      # - node_modules:/app/node_modules
     depends_on:
       - db
     ports:
-      - 7779:7779
+      - "7779:7779"
     stdin_open: true
     environment:
       - PORT=7779
-      - NODE_ENV=production
-    command: npm start
+    command: npm install && npm start 
 
   db:
     container_name: mariadb
     image: mariadb
     restart: always
     environment:
-      MARIADB_ROOT_PASSWORD: 1234
-    volumes:
-      - ./mysql:/var/lib/mysql
+      MARIADB_ROOT_PASSWORD: 123456
 
   adminer:
     container_name: adminer
     image: adminer
     restart: always
     ports:
-      - 3306:3306
-      
-volumes:
-  node_modules:
+      - "3306:3306"

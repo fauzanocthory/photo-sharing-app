@@ -1642,6 +1642,7 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				width: 100%;
+				object-fit: cover;
 			}
 
 			#main .thumb > h2 {

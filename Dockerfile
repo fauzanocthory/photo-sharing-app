@@ -1,10 +1,10 @@
 FROM node:alpine
 
-WORKDIR /app
+WORKDIR /usr/app
 
 COPY package*.json ./
 RUN npm install --silent
 
-COPY . ./
+COPY . .
 
 EXPOSE 7779
