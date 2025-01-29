@@ -8,3 +8,5 @@ RUN npm install --silent
 COPY . .
 
 EXPOSE 7779
+
+CMD [ "node", "index.js" ]

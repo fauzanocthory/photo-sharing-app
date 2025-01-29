@@ -1,11 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "1234",
     "database": "photos",
-    "host": "localhost",
+    "host": "192.168.100.90",
     "port": 3306,
-    "dialect": "mariadb"
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
