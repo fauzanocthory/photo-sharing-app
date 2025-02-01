@@ -23,7 +23,7 @@ PhotosRouter.route('/')
                 // response.redirect('/')
             })
             .catch((error) => {
-                response.send(error)
+                response.send(error, message : "gagalllll")
             })
     })
 
